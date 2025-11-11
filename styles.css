@@ -22,15 +22,20 @@ body {
 	word-break: break-word;
 }
 
-h1,h2,h3,h4,p,a {
+h1,h2,h3,h4,p,a,div {
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 	margin: 0;
-
+	padding: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0;
 }
 
-h1#bio {
+div#bio {
+position: absolute;
 font-family: Interlope;
 font-variant-ligatures: discretionary-ligatures;
 	text-align: center;
@@ -39,12 +44,12 @@ font-variant-ligatures: discretionary-ligatures;
 	padding: 0.5em;
 }
 
-h1#bio::first-letter, h1#bio strong {
-	font-weight: inherit;
+div#bio::first-letter, div#bio strong {
+	font-weight: normal;
 	font-variant-alternates: styleset(fancy);
 }
 
-h1#bio em {
+div#bio em {
 	font-family: arial;
 	font-size: 0.85em;
 	font-weight: 100;
@@ -53,4 +58,12 @@ h1#bio em {
 a {
 	text-decoration: inherit;
 	color: lightpink;
+}
+
+img.post_image {
+	position: absolute;
+	width: 10vw;
+	z-index: 10;
+	left: 200px;
+	top: 100px;
 }

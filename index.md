@@ -9,8 +9,13 @@
 </head>
 <body>
 	<div id="wrapper">
-		<h1 id="bio">
+		<div id="bio">
 			{{site.bio_text | markdownify}}
-		</h1>
+		</div>
+		<posts>
+  {% for post in site.posts %}
+  		<img src="{{post.image}}" alt="" class="post_image">
+  {% endfor %}
+	</posts>
 	</div>
 </body>
