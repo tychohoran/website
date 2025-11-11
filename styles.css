@@ -1,5 +1,56 @@
+@font-face {
+  font-family: "Interlope";
+  src:
+    local("Interlope"),
+    url("_uploads/Interlope-Regular.otf") format("opentype"),
+    url("_uploads/Interlope-Regular.woff") format("woff"),
+    url("_uploads/Interlope-Regular.woff2") format("woff2"),;
+}
+
+@font-feature-values Interlope {
+  @styleset {
+    fancy: 1;
+    queer: 6;
+  }
+}
+
 body {
-	background: light grey;
+	background: white;
+	color: darkgray;
 	font-family: arial;
-	font-size: 20pt;
+	hyphens: auto;
+	word-break: break-word;
+}
+
+h1,h2,h3,h4,p,a {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	margin: 0;
+
+}
+
+h1#bio {
+font-family: Interlope;
+font-variant-ligatures: discretionary-ligatures;
+	text-align: center;
+	font-size: 7vmax;
+	line-height: 1.3;
+	padding: 0.5em;
+}
+
+h1#bio::first-letter, h1#bio strong {
+	font-weight: inherit;
+	font-variant-alternates: styleset(fancy);
+}
+
+h1#bio em {
+	font-family: arial;
+	font-size: 0.85em;
+	font-weight: 100;
+}
+
+a {
+	text-decoration: inherit;
+	color: lightpink;
 }

@@ -9,6 +9,8 @@
 </head>
 <body>
 	<div id="wrapper">
-		{{site.bio_text | markdownify}}
+		<h1 id="bio">
+			{{site.bio_text | markdownify}}
+		</h1>
 	</div>
 </body>
