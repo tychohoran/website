@@ -21,7 +21,7 @@ defaults:
   values:
     layout: page
 permalink: pretty
-Bio Text: Tycho Horan is a printer, publication designer, and teacher. She cofounded
+bio_text: Tycho Horan is a printer, publication designer, and teacher. She cofounded
   [Binch Press / Queer.Archive.Work](https://binchqaw.studio) and the [Queer/Trans
   Zinefest (QTZ)](https://qtzfest.com). She is currently teaching at RISD Graphic
   Design and SMFA Print and Paper.
