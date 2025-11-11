@@ -15,9 +15,9 @@ defaults:
   values:
     layout: post
     permalink: "/posts/:title/"
-    year:
-    image:
-    thumbnail_image:
+    year: 
+    image: 
+    thumbnail_image: 
 - scope:
     path: ''
     type: pages
