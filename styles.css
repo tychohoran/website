@@ -2,9 +2,17 @@
   font-family: "Interlope";
   src:
     local("Interlope"),
-    url("_uploads/Interlope-Regular.otf") format("opentype"),
-    url("_uploads/Interlope-Regular.woff") format("woff"),
-    url("_uploads/Interlope-Regular.woff2") format("woff2"),;
+    url("uploads/Interlope-Regular.otf") format("opentype"),
+    url("uploads/Interlope-Regular.woff") format("woff"),
+    url("uploads/Interlope-Regular.woff2") format("woff2"),;
+}
+
+@font-face {
+  font-family: "IBMPlex";
+  src:
+    url("uploads/IBMPlexMono-Italic.otf") format("opentype"),
+    url("uploads/IBMPlexMono-Italic.woff") format("woff"),
+    url("uploads/IBMPlexMono-Italic.woff2") format("woff2"),;
 }
 
 @font-feature-values Interlope {
@@ -14,15 +22,21 @@
   }
 }
 
-body {
-	background: white;
-	color: darkgray;
-	font-family: arial;
-	hyphens: auto;
-	word-break: break-word;
+:root {
+  overscroll-behavior: none;
+  font-family: IBMPlex;
+  scroll-behavior: smooth;
 }
 
-h1,h2,h3,h4,p,a,div {
+body {
+	background: white;
+	color: black;
+	hyphens: auto;
+	word-break: break-word;
+	max: 100%;
+}
+
+body, html, h1,h2,h3,h4,p,a,div {
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
@@ -32,38 +46,94 @@ h1,h2,h3,h4,p,a,div {
 	right: 0;
 	top: 0;
 	margin: 0;
-}
-
-div#bio {
-position: absolute;
-font-family: Interlope;
-font-variant-ligatures: discretionary-ligatures;
-	text-align: center;
-	font-size: 7vmax;
-	line-height: 1.3;
-	padding: 0.5em;
-}
-
-div#bio::first-letter, div#bio strong {
-	font-weight: normal;
-	font-variant-alternates: styleset(fancy);
-}
-
-div#bio em {
-	font-family: arial;
-	font-size: 0.85em;
-	font-weight: 100;
+	box-sizing: border-box;
 }
 
 a {
 	text-decoration: inherit;
-	color: lightpink;
+	color: inherit;
 }
 
+/* Site Navigation */
+
+nav#site_nav {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	padding: 1em 0 0.5em 0;
+	color: black;
+}
+
+nav#site_nav a {
+	font-size: 20px;
+}
+
+/* Bio Backgrounf */
+
+div#bio {
+	position: fixed;
+}
+
+div#bio_text p::first-letter, div#bio p strong {
+	font-weight: normal;
+	font-variant-alternates: styleset(fancy);
+}
+
+div#bio_text p em {
+	font-family: IBMPlex;
+	font-size: 0.85em;
+	font-weight: 100;
+}
+
+div#bio_text p{
+	position: relative;
+	color: rgba(0, 0, 0, 0.2);
+	height: 100%;
+	padding: 0.5em;
+	font-family: Interlope;
+	font-variant-ligatures: discretionary-ligatures;
+	text-align: center;
+	font-size: 6vmax;
+	line-height: 1.3;
+	transition: color 0.25s;
+}
+
+div#bio_text.clicked p{
+	color: rgba(0, 0, 0, 0.75);
+}
+
+/* Style Work Sample Thumbnails */
+
 img.post_image {
-	position: absolute;
-	width: 10vw;
+	position: relative;
+	width: 200px;
 	z-index: 10;
-	left: 200px;
-	top: 100px;
+	padding: 20px 0;
+	transition: transform 0.125s ease-in-out, opacity 0.25s;
+	filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.125));
+	transform: scale(0.875);
+}
+
+div#work.clicked {
+	opacity: 0.5;
+}
+
+div#work {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+div.image_container {
+	text-align: center;
+	width: 100%;
+}
+
+
+a.image_link:hover img.post_image{
+	transform: scale(1);
+}
+
+div.top_spacer {
+	width: 100%;
+	height: 75%;
 }
