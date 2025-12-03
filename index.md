@@ -13,9 +13,9 @@
 			<div id="bio_text">
 				<nav id="site_nav">
 					<a href="#work" alt="" onclick="removeClick()">Work</a>
-					<a href="" alt="">Writing</a>
-					<a href="#Bio" alt="" onclick="darkenBioText()">Bio</a>
-					<a href="" alt="">Contact</a>
+					<!-- <a href="" alt="">Writing</a> -->
+					<a href="#bio" alt="" onclick="darkenBioText()">Bio</a>
+					<a href="#contact" alt="">Contact</a>
 				</nav>
 				{{site.bio_text | markdownify}}
 			</div>
@@ -30,6 +30,7 @@
 		  			</a>
 		  		</div>
   			{% endfor %}
+  			<div id="contact">{{site.contact_text | markdownify}}</div>
   			</div>
 		</posts>
 	</div>
