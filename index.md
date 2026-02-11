@@ -12,12 +12,13 @@
 		<div id="bio">
 			<div id="bio_text">
 				<nav id="site_nav">
-					<a href="#work" alt="" onclick="removeClick()">Work</a>
+					<a href="#work" alt="" onclick="removeClick()">&#128444;<span>&#8201;</span>Work</a>
 					<!-- <a href="" alt="">Writing</a> -->
-					<a href="#bio" alt="" onclick="darkenBioText()">Bio</a>
-					<a href="#contact" alt="">Contact</a>
+					<a href="#bio" alt="" onclick="darkenBioText()">&#128105;&#127996;<span>&#8201;</span>Bio</a>
+					<a href="#contact" alt="">&#128236;<span>&#8201;</span>Contact</a>
 				</nav>
 				{{site.bio_text | markdownify}}
+				<div id="credits">{{site.credits_text | markdownify}}</div>
 			</div>
 		</div>
 		<posts id="posts">
@@ -25,12 +26,22 @@
 			<div id="work">
   			{% for post in site.posts %}
 		  		<div class="image_container">
-		  			<a href="{{post.url}}" class="image_link">
+		  			<a href="{{post.url}}" class="image_link" style="width:calc({{post.dimensions_x}} * 35px);">
+		  				<p class="image_caption">
+		  					{{ post.title }}, {{ post.year }}
+		  				</p>
 		  				<img src="{{post.image}}" alt="" class="post_image">
+		  				<p class="image_caption">
+		  					{% if post.collaborators %}{{ post.collaborators | markdownify | strip_html}}{% endif %}
+		  				</p>
 		  			</a>
 		  		</div>
   			{% endfor %}
-  			<div id="contact">{{site.contact_text | markdownify}}</div>
+  			<div id="contact">
+  				<a href="mailto:tychohoran1@gmail.com" alt="Email Address">&#128140;<span>&#8201;</span>Email</a>
+  				<a href="" alt="Teaching Portfolio2">&#127822;<span>&#8201;</span>Teaching</a>
+  				<a href="https://docs.google.com/document/d/1zLW_gKqRLKTr6Tga7DSeWjlrjKWuRKOz2Zq5WzLAm-k/edit?usp=sharing" alt="Tycho Horan CV" target="_blank">&#128196;<span>&#8201;</span>CV</a>
+  			</div>
   			</div>
 		</posts>
 	</div>
@@ -38,10 +49,26 @@
 
 		// Randomly Place the Images
 
-		const images = document.getElementsByClassName("post_image");
+		const images = document.getElementsByClassName("image_link");
+		var last_place = 0;
+		var last_width, ratio;
 		for (let i = 0; i < images.length; i++) {
-			var random = Math.round(Math.random() * 89) - 44;
-			images.item(i).style.left = random + "%";
+			var random = Math.random() * 100 - 50;
+			var dif = Math.abs(last_place - random);
+			var width = images[i].offsetWidth;
+			if(!last_width){
+				ratio = 0;
+			} else {
+				ratio = Math.min(Math.max(width,last_width)/11,50);
+			}
+			console.log(ratio);
+			while(dif < ratio) {
+				random = Math.random() * 100 - 49;
+				dif = Math.abs(last_place - random);
+			}
+			images.item(i).style.left = Math.round(random * (150/width)) + "%";
+			last_place = random;
+			last_width = width;
 		}
 
 		// Paralax Effect
