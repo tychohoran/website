@@ -10,7 +10,7 @@ type:
 media: 
 description: 
 accent_image: 
-thumbnail_image: 
+thumbnail_image: "/uploads/thumbnails/Binch-QAW-Posre-Cai.jpg"
 detail_images: 
 visible_page: false
 ---

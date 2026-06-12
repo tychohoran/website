@@ -13,7 +13,7 @@ description: The Providence Seed Library Growing Guide is a risograph printed bo
   by Fatema Maswood. It was made with support from Community Libraries of Providence
   and Rhode Island Humanities. I designed and printed the booklets in collaboration
   with Fatema with illustrations by Carmen Ribaudo.
-thumbnail_image: 
+thumbnail_image: "/uploads/thumbnails/Growing-Guide-Final.png"
 visible_page: true
 detail_images:
 - "/uploads/growingguide/growingguide_1.jpg"

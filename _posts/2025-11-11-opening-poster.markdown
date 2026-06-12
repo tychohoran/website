@@ -10,7 +10,7 @@ type:
 media: 
 description: 
 accent_image: 
-thumbnail_image: 
+thumbnail_image: "/uploads/thumbnails/BinchPoster.jpg"
 detail_images: 
 visible_page: false
 ---
