@@ -26,7 +26,7 @@
 			<div id="work">
   			{% for post in site.posts %}
 		  		<div class="image_container">
-		  			<a href="{{post.url}}" class="image_link" style="width:calc({{post.dimensions_x}} * 35px);">
+		  			<a href="{% if post.visible_page %}{{post.url}}{% endif %}" class="image_link" style="width:calc({{post.dimensions_x}} * 35px);">
 		  				<p class="image_caption">
 		  					{{ post.title }}, {{ post.year }}
 		  				</p>
@@ -38,7 +38,7 @@
 		  		</div>
   			{% endfor %}
   			<div id="contact">
-  				<a href="mailto:tychohoran1@gmail.com" alt="Email Address">&#128140;<span>&#8201;</span>Email</a>
+  				<a href="mailto:tychohoran1@gmail.com" alt="Email Address" target="_blank">&#128140;<span>&#8201;</span>Email</a>
   				<a href="" alt="Teaching Portfolio2">&#127822;<span>&#8201;</span>Teaching</a>
   				<a href="https://docs.google.com/document/d/1zLW_gKqRLKTr6Tga7DSeWjlrjKWuRKOz2Zq5WzLAm-k/edit?usp=sharing" alt="Tycho Horan CV" target="_blank">&#128196;<span>&#8201;</span>CV</a>
   			</div>

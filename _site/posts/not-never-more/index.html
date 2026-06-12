@@ -5,27 +5,97 @@
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-	<div id="post_wrapper">
+
+	
+
+	<div id="post_wrapper" class="center">
 		<nav id="post_nav">
 			<a href="/" alt="">&#8617;<span>&#8201;</span>Home</a>
 		</nav>
-		<header id="post_header">
-				Not Never More
-		</header>
-		<div class="post_info">
-			<p class="post_year">2024</p>
-			<p class="post_dimensions">17" x 11"</p>
-			<p class="post_type"></p>
-			<p class="post_collaborators"><p><a href="https://www.jazzmenleejohnson.com/" target="_blank">Jazz Lee-Johnson</a></p>
-</p>
-		</div>
-		<br>
-		<div class="info_block">
-			
+		
+		<!-- <div id="post_top"> -->
 
-		</div>
-		<div class="image_carousel">
-			<img class="post_image" alt="Not Never More" src="/uploads/Not-Never-More.png">
-		</div>
+			<header id="post_header" class="center">
+					Not Never More
+			</header>
+			
+			<div class="info_block center"><p>Not Never More is a booklet and print folio accompanying an exhibition by Jazz Lee-Johnson. The installation consisted of screen printed tapestries displayed at Brown University. I designed, typeset and risograph printed the booklet and folio.</p>
+</div>
+			
+			<div class="post_info center">
+			
+				<p class="post_year">2023</p>
+			
+			
+				<p class="post_dimensions">17" x 11"</p>
+			
+			
+				<p class="post_type">Publication</p>
+			
+			
+				<p class="post_type">RISO</p>
+			
+			
+				<p><a href="https://www.jazzmenleejohnson.com/" target="_blank">Jazz Lee-Johnson</a></p>
+			
+			</div>
+			
+			<div class="post_content">
+				<p><img src="/uploads/Not-Never-More.png" alt="" style="padding: 2em" /></p>
+
+<p>In a reflection on the work, Jazz writes, “We inhabit our histories. We feel the pains of the past, we clang in its echoes, feel its residue caked up on our skin. History’s traumas have been perpetually erected in monuments, embedded in street names, stone walled in woodlands, hung, stacked, and plastered in architecture. Not Never More is my gut reaction and visual response to confronting such an architecture—the problematic 19th century French wallpaper Les Vues d’Amérique du Nord (The Views of North America), created in 1834 by Jean-Julien Deltil.”</p>
+
+<p><img src="/uploads/notnevermore/jazz_notnevermore.jpg" alt="" style="padding: 1em 0" /></p>
+
+<p>Jazz worked with a team to produce the large, screenprinted Not Never More tapestries. The team included Anna McNeary, Yolizbeth Lozano, Sage Matsushima, Katie Gui, Simon Slowinski, Lyza Baum, and Joel Orloff. The work was originally installed at the Nightingale-Brown House, and was on view from April to September 2022.</p>
+
+<p><img src="/uploads/notnevermore/notnevermore_4.jpg" alt="" /></p>
+
+<p>Early on in planning the installation, Jazz approached me about collaborating on a publication to contextualize the work. The exhibition guide includes a portion of the tremendous amount of archival research that went into making Not Never More and contextualized the ways in which Jazz wove archival materials into the imagery of the tapestries. The exhibiton guide that was accompanied by a folio of RISO printed reproductions of the tapesties with a numbered key printed on sheets of transparent vellum.</p>
+			</div>
+			
+		<!-- </div> -->
+		
+			<div id="carousel_wrapper">
+			<a id="back_arrow" onClick="scrollBack()" href="#carousel_wrapper" style="display:none;">&#8592;</a>
+			<a id="forward_arrow" onClick="scrollForward()" href="#carousel_wrapper">&#8594;</a>
+			<div id="image_carousel" onscroll="scrollEval()">
+			
+				<img class="post_detail" alt="" src="/uploads/notnevermore/notnevermore_1.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/notnevermore/notnevermore_3.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/notnevermore/notnevermore_2.jpg">
+			
+			</div>
+			</div>
+		
 	</div>
+
+	<script>
+		function scrollForward() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(carousel.offsetWidth, 0);
+		}
+		function scrollBack() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(-carousel.offsetWidth, 0);
+		}
+		function scrollEval() {
+			const carousel = document.getElementById("image_carousel");
+			const forward = document.getElementById("forward_arrow");
+			const back = document.getElementById("back_arrow");
+			var end = carousel.scrollWidth - carousel.offsetWidth;
+			if(carousel.scrollLeft > 0){
+				back.style.display = "flex";
+			} else {
+				back.style.display = "none";
+			}
+			if(carousel.scrollLeft < end){
+				forward.style.display = "flex";
+			} else {
+				forward.style.display = "none";
+			}
+		}
+	</script>
 </body>

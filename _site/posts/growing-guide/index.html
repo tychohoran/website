@@ -5,27 +5,103 @@
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-	<div id="post_wrapper">
+
+	
+
+	<div id="post_wrapper" class="normal">
 		<nav id="post_nav">
 			<a href="/" alt="">&#8617;<span>&#8201;</span>Home</a>
 		</nav>
-		<header id="post_header">
-				Growing Guide
-		</header>
-		<div class="post_info">
-			<p class="post_year">2025</p>
-			<p class="post_dimensions">6.25" x 8"</p>
-			<p class="post_type">Publication</p>
-			<p class="post_collaborators"><p>Fatema Maswood</p>
-</p>
-		</div>
-		<br>
-		<div class="info_block">
-			<p>The Providence Seed Library Growing Guide (2024) is a risograph printed book by Fatema Maswood. It was made with support from Community Libraries of Providence and Rhode Island Humanities. I designed and printed the booklets in collaboration with Fatema with illustrations by Carmen Ribaudo.</p>
+		
+			<img class="accent_image" alt="Growing Guide" src="/uploads/Growing-Guide-Final.png">
+		
+		<!-- <div id="post_top"> -->
 
-		</div>
-		<div class="image_carousel">
-			<img class="post_image" alt="Growing Guide" src="/uploads/Growing-Guide-Final.png">
-		</div>
+			<header id="post_header" class="normal">
+					Growing Guide
+			</header>
+			
+			<div class="info_block normal"><p>The Providence Seed Library Growing Guide is a risograph printed book by Fatema Maswood. It was made with support from Community Libraries of Providence and Rhode Island Humanities. I designed and printed the booklets in collaboration with Fatema with illustrations by Carmen Ribaudo.</p>
+</div>
+			
+			<div class="post_info normal">
+			
+				<p class="post_year">2025</p>
+			
+			
+				<p class="post_dimensions">6.25" x 8"</p>
+			
+			
+				<p class="post_type">Publication</p>
+			
+			
+				<p class="post_type">RISO</p>
+			
+			
+				<p>Fatema Maswood</p>
+			
+			</div>
+			
+			<div class="post_content">
+				<p><img src="/uploads/Growing-Guide-2_flatten-and-warp-d17a37.jpg" alt="" /></p>
+
+<p>The <a href="https://provseedlib.com/" target="_blank">Providence Seed Library</a> was a public seed library offering free open-pollinated, heirloom, culturally relevant, and indigenous seeds founded and organized by Fatma Maswood. Seeds were available at branches of the Community Libraries of Providence.</p>
+
+<p><img src="/uploads/growingguide/fatema_teaching.jpg" alt="" style="padding: 1em 0" /></p>
+
+<p>In order to make the seed library accessible to less experienced growers and gardeners, Fatma taught a series of seed starting worksops. She asked me to help design and print this Gowing Guide to collect and share that curriculum more broadly.</p>
+			</div>
+			
+		<!-- </div> -->
+		
+			<div id="carousel_wrapper">
+			<a id="back_arrow" onClick="scrollBack()" href="#carousel_wrapper" style="display:none;">&#8592;</a>
+			<a id="forward_arrow" onClick="scrollForward()" href="#carousel_wrapper">&#8594;</a>
+			<div id="image_carousel" onscroll="scrollEval()">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_1.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_2.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_3.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_4.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_5.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_6.jpg">
+			
+				<img class="post_detail" alt="" src="/uploads/growingguide/growingguide_7.jpg">
+			
+			</div>
+			</div>
+		
 	</div>
+
+	<script>
+		function scrollForward() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(carousel.offsetWidth, 0);
+		}
+		function scrollBack() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(-carousel.offsetWidth, 0);
+		}
+		function scrollEval() {
+			const carousel = document.getElementById("image_carousel");
+			const forward = document.getElementById("forward_arrow");
+			const back = document.getElementById("back_arrow");
+			var end = carousel.scrollWidth - carousel.offsetWidth;
+			if(carousel.scrollLeft > 0){
+				back.style.display = "flex";
+			} else {
+				back.style.display = "none";
+			}
+			if(carousel.scrollLeft < end){
+				forward.style.display = "flex";
+			} else {
+				forward.style.display = "none";
+			}
+		}
+	</script>
 </body>

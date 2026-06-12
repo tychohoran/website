@@ -5,27 +5,66 @@
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-	<div id="post_wrapper">
+
+	
+
+	<div id="post_wrapper" class="center">
 		<nav id="post_nav">
 			<a href="/" alt="">&#8617;<span>&#8201;</span>Home</a>
 		</nav>
-		<header id="post_header">
-				Opening Poster
-		</header>
-		<div class="post_info">
-			<p class="post_year">2021</p>
-			<p class="post_dimensions">11" x 17"</p>
-			<p class="post_type"></p>
-			<p class="post_collaborators"><p><a href="https://bmfu.net/" target="_blank">Beatrix Urkowitz</a></p>
-</p>
-		</div>
-		<br>
-		<div class="info_block">
-			
+		
+		<!-- <div id="post_top"> -->
 
-		</div>
-		<div class="image_carousel">
-			<img class="post_image" alt="Opening Poster" src="/uploads/BinchPoster.jpg">
-		</div>
+			<header id="post_header" class="center">
+					Opening Poster
+			</header>
+			
+			<div class="post_info center">
+			
+				<p class="post_year">2021</p>
+			
+			
+				<p class="post_dimensions">11" x 17"</p>
+			
+			
+			
+			
+				<p><a href="https://bmfu.net/" target="_blank">Beatrix Urkowitz</a></p>
+			
+			</div>
+			
+			<div class="post_content">
+				
+			</div>
+			
+		<!-- </div> -->
+		
 	</div>
+
+	<script>
+		function scrollForward() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(carousel.offsetWidth, 0);
+		}
+		function scrollBack() {
+			const carousel = document.getElementById("image_carousel");
+			carousel.scrollBy(-carousel.offsetWidth, 0);
+		}
+		function scrollEval() {
+			const carousel = document.getElementById("image_carousel");
+			const forward = document.getElementById("forward_arrow");
+			const back = document.getElementById("back_arrow");
+			var end = carousel.scrollWidth - carousel.offsetWidth;
+			if(carousel.scrollLeft > 0){
+				back.style.display = "flex";
+			} else {
+				back.style.display = "none";
+			}
+			if(carousel.scrollLeft < end){
+				forward.style.display = "flex";
+			} else {
+				forward.style.display = "none";
+			}
+		}
+	</script>
 </body>

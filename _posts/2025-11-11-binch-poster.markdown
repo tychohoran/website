@@ -6,6 +6,12 @@ image: "/uploads/Binch-QAW-Posre-Cai.jpg"
 collaborators: Cai Diluvio & [Dana Heng](https://danaheng.com/){:target='_blank'}
 dimensions_x: 11
 dimensions_y: 17
+type: 
+media: 
+description: 
+accent_image:
 thumbnail_image: 
+detail_images:
+visible_page: FALSE
 ---
 

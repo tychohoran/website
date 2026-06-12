@@ -2,17 +2,25 @@
   font-family: "Interlope";
   src:
     local("Interlope"),
-    url("uploads/Interlope-Regular.otf") format("opentype"),
-    url("uploads/Interlope-Regular.woff") format("woff"),
-    url("uploads/Interlope-Regular.woff2") format("woff2"),;
+    url("uploads/fonts/Interlope-Regular.otf") format("opentype"),
+    url("uploads/fonts/Interlope-Regular.woff") format("woff"),
+    url("uploads/fonts/Interlope-Regular.woff2") format("woff2"),;
 }
 
 @font-face {
   font-family: "IBMPlex";
   src:
-    url("uploads/IBMPlexMono-Italic.otf") format("opentype"),
-    url("uploads/IBMPlexMono-Italic.woff") format("woff"),
-    url("uploads/IBMPlexMono-Italic.woff2") format("woff2"),;
+    url("uploads/fonts/IBMPlexMono-Italic.otf") format("opentype"),
+    url("uploads/fonts/IBMPlexMono-Italic.woff") format("woff"),
+    url("uploads/fonts/IBMPlexMono-Italic.woff2") format("woff2"),;
+}
+
+@font-face {
+  font-family: "IBMPlex_light";
+  src:
+    url("uploads/fonts/IBMPlexMono-ExtraLight.otf") format("opentype"),
+    url("uploads/fonts/IBMPlexMono-ExtraLight.woff") format("woff"),
+    url("uploads/fonts/IBMPlexMono-ExtraLight.woff2") format("woff2"),;
 }
 
 @font-feature-values Interlope {
@@ -34,9 +42,11 @@ body {
 	hyphens: auto;
 	word-break: break-word;
 	max: 100%;
+	font-size: 10.5pt;
 }
 
-body, html, h1,h2,h3,h4,p,a,div {
+body, html, h1,h2,h3,h4,p,a,div, header, nav, img {
+	position: relative;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
@@ -69,7 +79,7 @@ div#contact {
 }
 
 nav#site_nav a, div#contact a, nav#post_nav a {
-	font-size: 20px;
+	font-size: 1.25rem;
 	z-index: 50;
 }
 nav#site_nav a span, div#contact a span, nav#post_nav a span {
@@ -182,35 +192,71 @@ a.image_link:hover p.image_caption {
 div.top_spacer {
 	width: 100%;
 	height: 50%;
+	pointer-events: none;
 }
 
 /*.  POST STYLES   */
 
-div#post_wrapper{
-	display: flex;
-	flex-flow: column wrap;
-	height: 100%;
-	align-items: flex-start;
-	justify-content: flex-start;
-	align-content: flex-start;
-	padding: 0 3em;
-	box-sizing: border-box;
+nav#post_nav{
+	justify-content: flex-end;
+	padding-bottom: 0.5em;
+	width: 100%;
+	order: -1;
 }
 
-div.image_carousel{
+nav#post_nav a{
+	font-size: 1rem;
+}
+
+div#post_wrapper{
+	padding: 0 4em;
+	margin: auto;
+	max-width: 1100px;
+}
+
+div#post_wrapper.center{
 	display: flex;
+	flex-flow: column nowrap;
+}
+
+/* div.image_carousel{
+	display: flex;
+	flex-flow: column nowrap;
 	width: 50%;
 	height: 100%;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-end;
+	justify-content: flex-start;
 	box-sizing: border-box;
+	order: 3;
+} */
+
+img.post_detail, div.post_content img {
+	width: 100%;
+	position: relative;
+	/* padding: 0 10%; */
 }
 
-div.image_carousel img{
-	display: block;
-	position: relative;
-	max-width: 100%;
-	max-height: 100%;
+div.post_content{
+	clear: both;
+}
+
+div.post_content p {
+	max-width: 800px;
+	margin: 2em auto;
+}
+
+div.post_content p:has(img) {
+	max-width: none;
+	margin: 0 auto;
+}
+
+
+img.accent_image {
+	max-width: calc(50% + 2em);
+	max-height: 75vh;
+	object-fit: contain;
+	float: right;
+	padding: 0 0 2em 2em;
 }
 
 header#post_header {
@@ -222,37 +268,184 @@ header#post_header {
 	padding: 0.5em 0 0.25em 0;
 }
 
-div.info_block {
-	width: 50%;
+header#post_header.center {
+	text-align: center;
+	order: -1;
 }
 
-/*div.post_info {
+div#post_wrapper header#post_header {
+	font-size: 3em;
+	padding: 0.25em 0 0.125em 0;
+	line-height: 1.2;
+	hyphens: none;
+}
+
+div.info_block {
+	z-index: 10;
+	order: 1;
+	padding: 1em 0;
+}
+
+div.info_block.center {
+	max-width: 800px;
+	margin: 0 auto;
+	order: 0;
+}
+
+
+div.post_info {
 	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	padding: 0.5em 0 1em 0;
+	order: 2;
+	z-index: 10;
+}
+
+div.post_info.center {
+	justify-content: center;
+	order: -1;
+	padding-right: 0;
+	width: 100%;
+	margin: 0 auto;
+}
+
+div.post_info p{
+	padding: 0.25em 0.75em;
+	border: solid 1pt black;
+	border-radius: 1em;
+	margin: 0 0 -0.5pt 0;
+}
+
+/*.  IMAGE CAROUSEL   */
+
+div#carousel_wrapper{
+	order: 10;
+}
+
+a#forward_arrow, a#back_arrow {
+	display: flex;
+	position: absolute;
+	height: 100%;
+	align-items: center;
+	z-index: 20;
+	font-size: 2em;
+	font-family: 'IBMPlex_light';
+	padding: 0.5em;
+}
+a#back_arrow {
+	left: 0;
+	right: auto;
+}
+a#forward_arrow {
+	left: auto;
+	right: 0;
+}
+
+
+/* div.image_carousel img{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+} */
+
+div#image_carousel{
+	display: flex;
+  	width: 100%;
+  	height: auto;
 	flex-flow: row nowrap;
-	justify-content: space-between;
-	width: 50%;
-}*/
+	overflow: scroll;
+	justify-content: flex-start;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+  }
+
+  div#image_carousel::-webkit-scrollbar {
+	display: none;
+	}
+
+  div#image_carousel img{
+	width: 100%;
+	scroll-snap-align: center;
+  }
+
+
 
 /*.  MOBILE   */
 
 @media only screen and (max-width: 800px) {
+
+body{
+	font-size: 10pt;
+}
+nav#post_nav {
+	justify-content: center;
+	font-size: 1em;
+	order: -1;
+}
+
+
+img.accent_image{
+	max-width: 100%;
+	max-height: min(75vmin, 500px);
+	order: 3;
+	padding: 0;
+}
+
   p.image_caption {
   	opacity: 0 !important;
   }
 
   div#post_wrapper{
-  	flex-flow: row wrap;
+	padding: 0;
+	display: flex;
+	align-items: flex-start;
+	align-content: flex-start;
+	flex-flow: row wrap;
   	justify-content: space-around;
+	max-height: none;
   }
+	div.post_info, div.post_info.center {
+		justify-content: center;
+		align-self: center;
+		order: 2;
+	}
 
-  div.image_carousel{
-  	width: 100%;
-  	height: auto;
-  	order: 2;
+  div.info_block, div.info_block.center{
+  	order: 5;
   }
+  div.info_block, div.info_block.center, div.post_content p {
+	margin: 0 auto;
+	padding: 2em 0;
+	max-width: 450px;
+	width: calc(100% - 4em);
+  }
+  div.post_content p:has(img) {
+	margin: 0 auto;
+	padding: 0;
+	max-width: none;
+	width: 100%
+  }
+  div#post_wrapper header#post_header{
+	padding-top: 1rem;
+	order: 1;
+	font-size: 3em;
+  }
+    div#post_wrapper header#post_header, div.post_info{
+		text-align: center;
+		padding-right: 0;
+		width: calc(100% - 2em);
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	header#post_header, div.post_info{
+		align-self: center;
+	}
 
-  div.info_block{
-  	width: 100%;
-  	order: 3;
-  }
+	div.post_content {
+		order: 6;
+	}
+
 }
