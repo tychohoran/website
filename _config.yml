@@ -15,13 +15,34 @@ defaults:
   values:
     layout: post
     permalink: "/posts/:title/"
+    year: 
+    image: 
+    collaborators: 
+    dimensions_x: 
+    dimensions_y: 
+    type: 
+    media: 
+    description: 
+    accent_image: 
+    thumbnail_image: 
+    detail_images: 
 - scope:
     path: ''
     type: pages
   values:
-    layout: page
+    layout: 
 permalink: pretty
-Bio Text: Tycho Horan is a printer, publication designer, and teacher. She cofounded
-  [Binch Press / Queer.Archive.Work](https://binchqaw.studio) and the [Queer/Trans
-  Zinefest (QTZ)](https://qtzfest.com). She is currently teaching at RISD Graphic
-  Design and SMFA Print and Paper.
+credits_text: This website was designed by Tycho Horan. It was coded on Sublime Text,
+  hosted on GitHub, and compiled using the [Siteleaf](https://www.siteleaf.com/){:target='_blank'}
+  CMS and [Jekyll](https://jekyllrb.com/){:target='_blank'}. The site is typeset in
+  [Interlope](https://velvetyne.fr/fonts/interlope/){:target='_blank'} (designed by
+  [Gabriel Dubourg](https://gabrieldubourg.fr/){:target='_blank'} and distributed
+  by [Velvetyne](https://velvetyne.fr/authors/gabriel-dubourg/){:target='_blank'})
+  and [IBM Plex Mono](https://www.ibm.com/plex/){:target='_blank'}. These works were
+  made in collaboration with many other artists, so please do not reuse or distribute
+  these images without my writen consent. This website was last updated in June 2026.
+contact_text: "[Email](mailto:tychohoran1@gmail.com){:target='_blank'} [CV](https://docs.google.com/document/d/1zLW_gKqRLKTr6Tga7DSeWjlrjKWuRKOz2Zq5WzLAm-k/edit?usp=sharing){:target='_blank'}"
+bio_text: Tycho **H**oran (*she/they*) is a trans book designer, printer, and teacher.
+  **S**he cofounded the [Binch Press / Queer.Archive.Work studio (*Binch/QAW*)](https://binchqaw.studio){:target='_blank'}
+  and the [Queer/Trans Zinefest (*QTZ*)](https://qtzfest.com){:target='_blank'}. **S**he
+  is currently teaching at *RISD* Graphic Design and *SMFA* Print and Paper.
