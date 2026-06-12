@@ -111,7 +111,7 @@ div#bio_text > p{
 	font-family: Interlope;
 	font-variant-ligatures: discretionary-ligatures;
 	text-align: center;
-	font-size: 6vmax;
+	font-size: max(6vw, 5em);
 	line-height: 1.3;
 	transition: color 0.25s;
 }
@@ -384,10 +384,6 @@ nav#post_nav {
 	justify-content: center;
 	font-size: 1em;
 	order: -1;
-}
-
-div#bio_text > p{
-	font-size: 8vmax;
 }
 
 
