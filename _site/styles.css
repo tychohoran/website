@@ -386,6 +386,10 @@ nav#post_nav {
 	order: -1;
 }
 
+div#bio_text > p{
+	font-size: 8vmax;
+}
+
 
 img.accent_image{
 	max-width: 100%;
