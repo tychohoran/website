@@ -30,7 +30,7 @@
 		  				<p class="image_caption">
 		  					{{ post.title }}, {{ post.year }}
 		  				</p>
-		  				<img src="{{post.image}}" alt="" class="post_image" width="800">
+		  				<img src="{{post.thumbnail_image}}" alt="" class="post_image" width="800">
 		  				<p class="image_caption">
 		  					{% if post.collaborators %}{{ post.collaborators | markdownify | strip_html}}{% endif %}
 		  				</p>

@@ -8,7 +8,7 @@ dimensions_x: 5.5
 dimensions_y: 8.125
 type: Publication
 media: RISO + Screenprint
-thumbnail_image: 
+thumbnail_image: "/uploads/thumbnails/Club-Desire.png"
 accent_image: "/uploads/Club-Desire.png"
 description: Club Desire is a collection of poems by Laura Lamb Brown-Lavoie. Each
   book is risograph printed, perfect bound, and comes with a book of screen printed
