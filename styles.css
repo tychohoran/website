@@ -75,7 +75,7 @@ nav#site_nav, div#contact, nav#post_nav{
 }
 
 div#contact {
-	padding: 12em 0 1.25em 0;
+	padding: 50vh 0 1.25em 0;
 }
 
 nav#site_nav a, div#contact a, nav#post_nav a {
@@ -111,7 +111,7 @@ div#bio_text > p{
 	font-family: Interlope;
 	font-variant-ligatures: discretionary-ligatures;
 	text-align: center;
-	font-size: max(6vw, 5em);
+	font-size: max(6vw, 4em);
 	line-height: 1.3;
 	transition: color 0.25s;
 }
@@ -191,7 +191,7 @@ a.image_link:hover p.image_caption {
 
 div.top_spacer {
 	width: 100%;
-	height: 50%;
+	height: 66.66%;
 	pointer-events: none;
 }
 
