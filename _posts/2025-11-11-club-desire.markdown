@@ -8,10 +8,13 @@ dimensions_x: 5.5
 dimensions_y: 8.125
 type: Publication
 media: RISO + Screenprint
-thumbnail_image:
+thumbnail_image: 
 accent_image: "/uploads/Club-Desire.png"
-description: Club Desire is a collection of poems by Laura Lamb Brown-Lavoie. Each book is risograph printed, perfect bound, and comes with a book of screen printed matches. I designed, printed, bound, and distributed the books and fabricated the matchbooks with help from MJ Sanqui.
-visible_page: TRUE
+description: Club Desire is a collection of poems by Laura Lamb Brown-Lavoie. Each
+  book is risograph printed, perfect bound, and comes with a book of screen printed
+  matches. I designed, printed, bound, and distributed the books and fabricated the
+  matchbooks with help from MJ Sanqui.
+visible_page: true
 detail_images:
 - "/uploads/clubdesire/Club-Desire_1.jpg"
 - "/uploads/clubdesire/Club-Desire_2.jpg"

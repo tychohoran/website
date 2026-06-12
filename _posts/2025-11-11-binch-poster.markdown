@@ -9,9 +9,9 @@ dimensions_y: 17
 type: 
 media: 
 description: 
-accent_image:
+accent_image: 
 thumbnail_image: 
-detail_images:
-visible_page: FALSE
+detail_images: 
+visible_page: false
 ---
 
