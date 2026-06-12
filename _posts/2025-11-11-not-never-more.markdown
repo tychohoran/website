@@ -8,10 +8,12 @@ dimensions_x: 17
 dimensions_y: 11
 type: Publication
 media: RISO
-description: Not Never More is a booklet and print folio accompanying an exhibition by Jazz Lee-Johnson. The installation consisted of screen printed tapestries displayed at Brown University. I designed, typeset and risograph printed the booklet and folio.
-accent_image:
+description: Not Never More is a booklet and print folio accompanying an exhibition
+  by Jazz Lee-Johnson. The installation consisted of screen printed tapestries displayed
+  at Brown University. I designed, typeset and risograph printed the booklet and folio.
+accent_image: 
 thumbnail_image: 
-visible_page: TRUE
+visible_page: true
 detail_images:
 - "/uploads/notnevermore/notnevermore_1.jpg"
 - "/uploads/notnevermore/notnevermore_3.jpg"

@@ -20,17 +20,17 @@ defaults:
     collaborators: 
     dimensions_x: 
     dimensions_y: 
-    type:
-    media:
-    description:
-    accent_image:
+    type: 
+    media: 
+    description: 
+    accent_image: 
     thumbnail_image: 
-    detail_images:
+    detail_images: 
 - scope:
     path: ''
     type: pages
   values:
-    layout:
+    layout: 
 permalink: pretty
 credits_text: This website was designed by Tycho Horan. It was coded on Sublime Text,
   hosted on GitHub, and compiled using the [Siteleaf](https://www.siteleaf.com/){:target='_blank'}
@@ -40,8 +40,7 @@ credits_text: This website was designed by Tycho Horan. It was coded on Sublime 
   by [Velvetyne](https://velvetyne.fr/authors/gabriel-dubourg/){:target='_blank'})
   and [IBM Plex Mono](https://www.ibm.com/plex/){:target='_blank'}. These works were
   made in collaboration with many other artists, so please do not reuse or distribute
-  these images without my writen consent. This website was last updated in June
-  2026.
+  these images without my writen consent. This website was last updated in June 2026.
 contact_text: "[Email](mailto:tychohoran1@gmail.com){:target='_blank'} [CV](https://docs.google.com/document/d/1zLW_gKqRLKTr6Tga7DSeWjlrjKWuRKOz2Zq5WzLAm-k/edit?usp=sharing){:target='_blank'}"
 bio_text: Tycho **H**oran is a book designer, printer, and teacher.
   **S**he cofounded the [Binch Press / Queer.Archive.Work studio (*Binch/QAW*)](https://binchqaw.studio){:target='_blank'}
